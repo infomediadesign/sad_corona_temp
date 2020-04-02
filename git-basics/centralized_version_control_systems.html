@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Centralized Version Control Systems | Version Control Systems and Git </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Christoph Hahn" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<header id="header" ><div id="headerContent">Version Control Systems and Git</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Version Control and Git</a></li>
+   <li class="current-page-parent"><a href="about_version_control.html" class="current-page-parent daddy">About Version Control</a>
+   <ul>
+      <li><a href="local_version_control_systems.html" class="no-ch">Local Version Control Systems</a></li>
+      <li id="active"><a href="centralized_version_control_systems.html" class="active no-ch">Centralized Version Control Systems</a></li>
+      <li><a href="distributed_version_control_systems.html" class="no-ch">Distributed Version Control Systems</a></li>
+   </ul>
+   </li>
+   <li><a href="git_concepts.html" class="no-ch">Git Concepts</a></li>
+   <li><a href="getting_startet_with_git.html" class="daddy">Getting startet with Git</a>
+   <ul class="other-section">
+      <li><a href="git_command_line_and_gui_applications.html" class="no-ch">Git Command Line and GUI Applications</a></li>
+      <li><a href="firsttime_git_setup.html" class="no-ch">First-Time Git Setup</a></li>
+   </ul>
+   </li>
+   <li><a href="getting_a_git_repository.html" class="no-ch">Getting a Git Repository</a></li>
+   <li><a href="a_short_demo.html" class="no-ch">A short demo</a></li>
+   <li><a href="whats_next.html" class="no-ch">What's next?</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="local_version_control_systems.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="distributed_version_control_systems.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Centralized Version Control Systems</h1></header>
+<article class="iDevice_wrapper textIdevice" id="id4">
+<div class="iDevice emphasis0" >
+<div id="ta4_111_2" class="block iDevice_content">
+<div class="exe-text"><p>The next major issue that people encounter is that they need to collaborate with developers on other systems. To deal with this problem, Centralized Version Control Systems (CVCSs) were developed. These systems (such as CVS, Subversion, and Perforce) have a single server that contains all the versioned files, and a number of clients that check out files from that central place. For many years, this has been the standard for version control.</p>
+<div class="paragraph">
+<p>This setup offers many advantages, especially over local VCSs. For example, everyone knows to a certain degree what everyone else on the project is doing. Administrators have fine-grained control over who can do what, and it’s far easier to administer a CVCS than it is to deal with local databases on every client.</p>
+</div>
+<div class="paragraph">
+<p>However, this setup also has some serious downsides. The most obvious is the single point of failure that the centralized server represents. If that server goes down for an hour, then during that hour nobody can collaborate at all or save versioned changes to anything they’re working on. If the hard disk the central database is on becomes corrupted, and proper backups haven’t been kept, you lose absolutely everything — the entire history of the project except whatever single snapshots people happen to have on their local machines. Local VCS systems suffer from this same problem — whenever you have the entire history of the project in a single place, you risk losing everything.</p>
+</div></div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Licensed under the</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution Non-commercial Share Alike License 3.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="local_version_control_systems.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="distributed_version_control_systems.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Getting a Git Repository | Version Control Systems and Git </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Christoph Hahn" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<header id="header" ><div id="headerContent">Version Control Systems and Git</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Version Control and Git</a></li>
+   <li><a href="about_version_control.html" class="daddy">About Version Control</a>
+   <ul class="other-section">
+      <li><a href="local_version_control_systems.html" class="no-ch">Local Version Control Systems</a></li>
+      <li><a href="centralized_version_control_systems.html" class="no-ch">Centralized Version Control Systems</a></li>
+      <li><a href="distributed_version_control_systems.html" class="no-ch">Distributed Version Control Systems</a></li>
+   </ul>
+   </li>
+   <li><a href="git_concepts.html" class="no-ch">Git Concepts</a></li>
+   <li><a href="getting_startet_with_git.html" class="daddy">Getting startet with Git</a>
+   <ul class="other-section">
+      <li><a href="git_command_line_and_gui_applications.html" class="no-ch">Git Command Line and GUI Applications</a></li>
+      <li><a href="firsttime_git_setup.html" class="no-ch">First-Time Git Setup</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="getting_a_git_repository.html" class="active no-ch">Getting a Git Repository</a></li>
+   <li><a href="a_short_demo.html" class="no-ch">A short demo</a></li>
+   <li><a href="whats_next.html" class="no-ch">What's next?</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="firsttime_git_setup.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="a_short_demo.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Getting a Git Repository</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id21">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Initializing a Repository in an Existing Directory</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta21_108_2" class="block iDevice_content">
+<div class="exe-text"><div class="paragraph">
+<p>You typically obtain a Git repository in one of two ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You can take a local directory that is currently not under version control, and turn it into a Git repository, or</p>
+</li>
+<li>
+<p>You can <em>clone</em> an existing Git repository from elsewhere.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In either case, you end up with a Git repository on your local machine, ready for work.</p>
+<p>Let's start by creating a repository in an existing directory:</p>
+<div class="paragraph">
+<p>If you have a project directory that is currently not under version control and you want to start controlling it with Git, you first need to go to that project’s directory. If you’ve never done this in a terminal windows, it looks a little different depending on which system you’re running:</p>
+<p><span>for Windows:</span></p>
+<p><code><span>cd C:/path/to/my/project</span></code></p>
+<p><span>for MacOS and Linux:</span></p>
+<p><code><span>cd /path/to/my/project</span></code></p>
+<div class="paragraph">
+<p>This creates a new subdirectory named <code>.git</code> that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet.</p>
+</div>
+<div class="paragraph">
+<p>If you want to start version-controlling existing files (as opposed to an empty directory), you should probably begin tracking those files and do an initial commit. You can accomplish that with a few <code>git add</code>commands that specify the files you want to track, followed by a <code>git commit</code>:</p>
+<p><code>$ git add file1.c</code><br /><code>$ git add file2.c</code><br /><code>$ git commit -m 'Initial project version'</code></p>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id22">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Cloning an Existing Repository</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta22_109_2" class="block iDevice_content">
+<div class="exe-text"><p><span>If you want to get a copy of an existing Git repository — for example, a project you’d like to contribute to — the command you need is </span><code>git clone</code><span>. </span></p>
+<p><span>You clone a repository with <code>git clone &lt;url&gt;</code>. For example, if you want to clone the Git linkable library called <code>libgit2</code>, you can do so like this:</span></p>
+<p><code>git clone <a href="https://github.com/libgit2/libgit2">https://github.com/libgit2/libgit2</a></code></p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Licensed under the</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution Non-commercial Share Alike License 3.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="firsttime_git_setup.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="a_short_demo.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>

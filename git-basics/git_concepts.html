@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>Git Concepts | Version Control Systems and Git </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="Christoph Hahn" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-5"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Skip navigation</a></p>
+<header id="header" ><div id="headerContent">Version Control Systems and Git</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">Version Control and Git</a></li>
+   <li><a href="about_version_control.html" class="daddy">About Version Control</a>
+   <ul class="other-section">
+      <li><a href="local_version_control_systems.html" class="no-ch">Local Version Control Systems</a></li>
+      <li><a href="centralized_version_control_systems.html" class="no-ch">Centralized Version Control Systems</a></li>
+      <li><a href="distributed_version_control_systems.html" class="no-ch">Distributed Version Control Systems</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="git_concepts.html" class="active no-ch">Git Concepts</a></li>
+   <li><a href="getting_startet_with_git.html" class="daddy">Getting startet with Git</a>
+   <ul class="other-section">
+      <li><a href="git_command_line_and_gui_applications.html" class="no-ch">Git Command Line and GUI Applications</a></li>
+      <li><a href="firsttime_git_setup.html" class="no-ch">First-Time Git Setup</a></li>
+   </ul>
+   </li>
+   <li><a href="getting_a_git_repository.html" class="no-ch">Getting a Git Repository</a></li>
+   <li><a href="a_short_demo.html" class="no-ch">A short demo</a></li>
+   <li><a href="whats_next.html" class="no-ch">What's next?</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="distributed_version_control_systems.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="getting_startet_with_git.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">Git Concepts</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Snapshots, not Differences</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_113_2" class="block iDevice_content">
+<div class="exe-text"><p><span>Git thinks of its data like a series of snapshots of a miniature filesystem. With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored. Git thinks about its data more like a </span><strong>stream of snapshots</strong>, <span>most other VCS systems store information as a list of file-based changes. </span></p>
+<p><span><img src="snapshots.png" alt="Git file snapshots" width="800" height="305" /></span></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id7">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Nearly every Operation is local</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_114_2" class="block iDevice_content">
+<div class="exe-text"><p><span>Most operations in Git need only local files and resources to operate — generally no information is needed from another computer on your network. If you’re used to a CVCS where most operations have that network latency overhead, this aspect of Git will make you think that the gods of speed have blessed Git with unworldly powers. Because you have the entire history of the project right there on your local disk, most operations seem almost instantaneous.</span></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id8">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Git Has Integrity</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_115_2" class="block iDevice_content">
+<div class="exe-text"><p><span>Everything in Git is checksummed before it is stored and is then referred to by that checksum. This means it’s impossible to change the contents of any file or directory without Git knowing about it. This functionality is built into Git at the lowest levels and is integral to its philosophy. </span></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">The Three States</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_116_2" class="block iDevice_content">
+<div class="exe-text"><div class="paragraph">
+<p>Pay attention now — here is the main thing to remember about Git if you want the rest of your learning process to go smoothly. Git has three main states that your files can reside in: <em>modified</em>, <em>staged</em>, and <em>committed</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Modified means that you have changed the file but have not committed it to your database yet.</p>
+</li>
+<li>
+<p>Staged means that you have marked a modified file in its current version to go into your next commit snapshot.</p>
+</li>
+<li>
+<p>Committed means that the data is safely stored in your local database.</p>
+</li>
+</ul>
+<p><span>This leads us to the three main sections of a Git project: the working tree, the staging area, and the Git directory.</span></p>
+<p><span><img src="areas.png" alt="Working tree, staging area, and Git directory" width="800" height="441" /></span></p>
+<div class="paragraph">
+<p>The working tree is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.</p>
+</div>
+<div class="paragraph">
+<p>The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. Its technical name in Git parlance is the “index”, but the phrase “staging area” works just as well.</p>
+</div>
+<div class="paragraph">
+<p>The Git directory is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you <em>clone</em> a repository from another computer.</p>
+</div>
+<div class="paragraph">
+<p>The basic Git workflow goes something like this:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You modify files in your working tree.</p>
+</li>
+<li>
+<p>You selectively stage just those changes you want to be part of your next commit, which adds <em>only</em>those changes to the staging area.</p>
+</li>
+<li>
+<p>You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If a particular version of a file is in the Git directory, it’s considered <em>committed</em>. If it has been modified and was added to the staging area, it is <em>staged</em>. And if it was changed since it was checked out but has not been staged, it is <em>modified</em>.</p>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-nc-sa">
+<p><span>Licensed under the</span> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution Non-commercial Share Alike License 3.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="distributed_version_control_systems.html" class="prev"><span><span>&laquo; </span>Previous</span></a> <span class="sep">| </span><a href="getting_startet_with_git.html" class="next"><span>Next<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body></html>
